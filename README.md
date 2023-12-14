@@ -1,7 +1,16 @@
-# Vue 3 + Vite
+# Milestone 0:
+Progettare la struttura del global state sulla linea degli esercizi svolti nei giorni precedenti.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+# Logica
+
+1. Dopo aver creato la struttura con vite + vue. installiamo il pacchetto axios in modo da poter chiamare l' Api.
+
+2. Creiamo uno store globale per i dati.
+
+3. Creo una funzione per richiamare l api e leggere i suoi dati, in modo da averli salvati nello store.
+
+4. Nella funziona, grazie all interpolazione, ci possiamo gestire il caso di ricerca, in modo che ci restituisce i risultati. (se il campo di ricerca è vuoto, Api ci restiuisce zero risultati. Ma non dà errore).
+
