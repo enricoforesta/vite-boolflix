@@ -11,6 +11,11 @@ Lingua
 Voto
 
 
+# Milestone 2:
+
+Trasformiamo la stringa statica della lingua in una vera e propria bandiera della nazione corrispondente, gestendo il caso in cui non abbiamo la bandiera della nazione ritornata dall’API (le flag non ci sono in FontAwesome).
+
+
 
 # Logica
 
@@ -33,3 +38,13 @@ Voto
 3. Al input button inseriamo un evento @click in modo che dopo aver scritto nell input di testo, clicchiamo sul bottone per avviare la ricerca.
 
 4. Con la direttiva v-for stampiamo a schermo tutti i risultati ottenuti, usiamo il v-for per ciclare tutti i risultati.
+
+# Milestone 2:
+
+1. Aggiungiamo le condizioni in modo che 
+---SE
+    la lingua è "it" stampa la bandiera italiana
+--- ALTRIMENTI SE
+    la lingua è "en" stampa la bandiera inglese
+--- ALTRIMENTI
+    stampa la stringa della lingua
