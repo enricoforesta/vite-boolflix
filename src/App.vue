@@ -2,6 +2,7 @@
 import { store } from './store'
 import axios from 'axios';
 export default {
+  name: "App",
   data() {
     return {
       store
@@ -36,10 +37,19 @@ export default {
     <ul v-for="movie in this.store.resultsMovie" class="result">
       <li>Titolo: {{ movie.title }}</li>
       <li>Titolo originale: {{ movie.original_title }}</li>
-      <li>Lingua originale: {{ movie.original_language }}</li>
+      <li>Lingua originale:
+        <span v-if="(movie.original_language === 'en')"> <img src="/bandiera-inglese.png" alt="bandiera-inglese"></span>
+        <span v-else-if="(movie.original_language === 'it')"> <img src="/bandiera-italiana.png" alt="bandiera-italiana">
+        </span>
+        <span v-else> {{ movie.original_language }}</span>
+      </li>
       <li>Voto: {{ movie.vote_average }}</li>
     </ul>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+img {
+  width: 30px;
+}
+</style>
