@@ -19,7 +19,8 @@ export default {
         <ul>
             <li v-for="serie in this.store.resultsSeries" class="result">
                 <ComponentCard :title="serie.name" :original_title="serie.original_name"
-                    :original_language="serie.original_language" :vote="serie.vote_average" />
+                    :original_language="serie.original_language" :vote="serie.vote_average"
+                    :url_img="serie.backdrop_path ? this.store.apiConfig.apiImage + serie.backdrop_path : '/faviconNetflix.ico'" />
             </li>
         </ul>
     </div>

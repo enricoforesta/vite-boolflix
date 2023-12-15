@@ -9,7 +9,7 @@ export default {
     },
     components: {
         ComponentCard
-    }
+    },
 }
 </script>
 
@@ -19,7 +19,8 @@ export default {
         <ul>
             <li v-for="movie in this.store.resultsMovies" class="result">
                 <ComponentCard :title="movie.title" :original_title="movie.original_title"
-                    :original_language="movie.original_language" :vote="movie.vote_average" />
+                    :original_language="movie.original_language" :vote="movie.vote_average"
+                    :url_img="movie.backdrop_path ? this.store.apiConfig.apiImage + movie.backdrop_path : '/faviconNetflix.ico'" />
             </li>
         </ul>
     </div>

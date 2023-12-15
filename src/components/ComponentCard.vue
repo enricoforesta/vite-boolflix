@@ -1,11 +1,12 @@
 <script >
+import { store } from '../store';
 
 export default {
     name: "card",
-    props: ['title', 'original_title', 'original_language', 'vote'],
+    props: ['title', 'original_title', 'original_language', 'vote', 'url_img'],
     data() {
         return {
-
+            store
         }
     },
 }
@@ -13,6 +14,7 @@ export default {
 
 <template>
     <div>
+        <img :src="url_img" alt="cc">
         <h3>Titolo: {{ title }}</h3>
         <h3>Titolo originale: {{ original_title }}</h3>
         <h3>Lingua originale:
