@@ -17,6 +17,17 @@ Trasformiamo la stringa statica della lingua in una vera e propria bandiera dell
 
 Allarghiamo poi la ricerca anche alle serie tv. Con la stessa azione di ricerca dovremo prendere sia i film che corrispondono alla query, sia le serie tv, stando attenti ad avere alla fine dei valori simili.
 
+# Milestone 3:
+
+In questa milestone come prima cosa aggiungiamo la copertina del film o della serie al nostro elenco.
+
+Trasformiamo poi il voto da 1 a 10 decimale in un numero intero da 1 a 5, così da permetterci di stampare a schermo un numero di stelle piene che vanno da 1 a 5, lasciando le 
+restanti vuote.
+
+Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezze piene
+
+
+
 
 # Logica
 
@@ -51,4 +62,9 @@ Allarghiamo poi la ricerca anche alle serie tv. Con la stessa azione di ricerca 
     stampa la stringa della lingua
 
 2. Nello store globale ci creiamo i dati dell url delle serie tv, e un array vuoto per popolarlo quando facciamo la chiamata.
+
+# Milestone 3
+
+1. Per aggiungere le immagini, Nei componenti delle serie e film, al props dell Url_img usiamo l operatoreternario in modo che se la path non restituisce un immagine, impostiamo noi una di default.
+
 
