@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div class="search-text">
-        <label for="search">cerca il tuo film</label>
+        <label for="search">cerca il tuo film </label>
         <input v-model="this.store.searchText" type="text" name="search" id="search">
         <input @click="$emit('search')" type="button" value="cerca">
     </div>
