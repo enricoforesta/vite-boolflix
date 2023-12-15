@@ -67,4 +67,9 @@ Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezz
 
 1. Per aggiungere le immagini, Nei componenti delle serie e film, al props dell Url_img usiamo l operatoreternario in modo che se la path non restituisce un immagine, impostiamo noi una di default.
 
+2. Installiamo il pacchetto FontAwesome seguendo la documentazione.
+
+3. Ci salviamo un numero massimo del voto, e Creiamo una funzione dove trasformiamo il voto preso dall api, in un voto arrotondato per eccesso e lo dividiamo per 2.
+
+4. Nel template aggiungiamo le icone e le cicliamo con un v-for con due condizioni diverse, in modo che le stelle piene siano uguali al numero che ritorna la funzione, e quelle vuote siano la differenza tra il voto massimo e il voto restituito dalla funzione.
 
