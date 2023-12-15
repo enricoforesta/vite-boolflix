@@ -1,14 +1,19 @@
 <script >
-import { store } from '../store';
+
 
 export default {
     name: "card",
     props: ['title', 'original_title', 'original_language', 'vote', 'url_img'],
     data() {
         return {
-            store
+            maxVote: 5,
         }
     },
+    computed: {
+        voteInteger() {
+            return Math.ceil(this.vote / 2)
+        }
+    }
 }
 </script>
 
@@ -23,7 +28,9 @@ export default {
             </span>
             <span v-else> {{ original_language }}</span>
         </h3>
-        <h3>Voto: {{ vote }}</h3>
+        <h3>Voto:<font-awesome-icon icon="fa-solid fa-star" v-for="n in voteInteger " />
+            <font-awesome-icon icon="fa-regular fa-star" v-for="n in maxVote - voteInteger " />
+        </h3>
     </div>
 </template>
 
