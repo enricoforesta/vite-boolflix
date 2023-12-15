@@ -15,6 +15,7 @@ Voto
 
 Trasformiamo la stringa statica della lingua in una vera e propria bandiera della nazione corrispondente, gestendo il caso in cui non abbiamo la bandiera della nazione ritornata dall’API (le flag non ci sono in FontAwesome).
 
+Allarghiamo poi la ricerca anche alle serie tv. Con la stessa azione di ricerca dovremo prendere sia i film che corrispondono alla query, sia le serie tv, stando attenti ad avere alla fine dei valori simili.
 
 
 # Logica
@@ -48,3 +49,6 @@ Trasformiamo la stringa statica della lingua in una vera e propria bandiera dell
     la lingua è "en" stampa la bandiera inglese
 --- ALTRIMENTI
     stampa la stringa della lingua
+
+2. Nello store globale ci creiamo i dati dell url delle serie tv, e un array vuoto per popolarlo quando facciamo la chiamata.
+
