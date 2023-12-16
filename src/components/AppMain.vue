@@ -1,5 +1,5 @@
 <script >
-import ComponentMovie from './componentMovie.vue'
+import ComponentMovie from './ComponentMovie.vue'
 import ComponentSerie from './ComponentSerie.vue';
 export default {
     name: "AppMain",

@@ -16,7 +16,7 @@ export default {
 <template>
     <div v-if="this.store.resultsSeries.length" class="serie">
         <h2>Series</h2>
-        <ul>
+        <ul class="d-flex flex-wrap row-cols-xxl-4 row-cols-lg-3 row-cols-md-2">
             <li v-for="serie in this.store.resultsSeries" class="result">
                 <ComponentCard :title="serie.name" :original_title="serie.original_name"
                     :original_language="serie.original_language" :vote="serie.vote_average"

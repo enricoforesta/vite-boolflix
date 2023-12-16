@@ -21,8 +21,10 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
+  <div>
+    <AppHeader />
+    <AppMain />
+  </div>
 </template>
 
 <style scoped></style>
