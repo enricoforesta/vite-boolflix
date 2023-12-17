@@ -4,6 +4,7 @@ export const store = reactive({
     apiConfig,
     resultsMovies: [],
     resultsSeries: [],
+    errorMessage: '',
     searchText: "",
 
 })

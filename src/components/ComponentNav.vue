@@ -24,17 +24,29 @@ export default {
                     query: this.store.searchText,
                 }
             }).then((response) => {
-                this.store.resultsMovies = response.data.results
-                console.log(this.store.resultsMovies)
+                if (response.data.results.length > 0) {
+                    this.store.resultsMovies = response.data.results
+                    console.log(this.store.resultsMovies)
+                } else (
+                    this.store.resultsMovies = '',
+                    this.store.errorMessage = 'Nessun elemento trovato'
+                )
+
             }),
                 axios.get(this.store.apiConfig.apiUrlSeries, {
                     params: {
                         api_key: this.store.apiConfig.apiKey,
+                        language: this.store.apiConfig.language,
                         query: this.store.searchText
                     }
                 }).then((response) => {
-                    this.store.resultsSeries = response.data.results
-                    console.log(this.store.resultsSeries)
+                    if (response.data.results.length > 0) {
+                        this.store.resultsSeries = response.data.results
+                        console.log(this.store.resultsSeries)
+                    } else {
+                        this.store.errorMessage = 'Nessun elemento trovato'
+                    }
+
                 })
         }
     },
@@ -45,7 +57,7 @@ export default {
     <nav class="navbar bg-dark px-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="/faviconNetflix.ico" alt="Logo" width="50" class="d-inline-block">
+                <img src="/logo.jpeg" alt="Logo" width="50" class="d-inline-block">
                 <span class="fs-3 text-danger ps-3">BOOLFLIX</span>
             </a>
             <ComponentSearch @search="this.callApi()" />
