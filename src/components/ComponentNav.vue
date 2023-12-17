@@ -12,8 +12,6 @@ export default {
     },
     components: {
         ComponentSearch
-    }, created() {
-        this.callApi()
     },
     methods: {
         callApi() {
@@ -27,10 +25,12 @@ export default {
                 if (response.data.results.length > 0) {
                     this.store.resultsMovies = response.data.results
                     console.log(this.store.resultsMovies)
-                } else (
+                } else {
                     this.store.resultsMovies = '',
-                    this.store.errorMessage = 'Nessun elemento trovato'
-                )
+                        this.store.errorMessage = 'Nessun elemento trovato'
+                }
+
+
 
             }),
                 axios.get(this.store.apiConfig.apiUrlSeries, {
