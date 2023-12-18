@@ -13,6 +13,7 @@ export default {
     components: {
         ComponentSearch
     },
+
     methods: {
         callApi() {
             axios.get(this.store.apiConfig.apiUrlMovies, {
@@ -24,14 +25,14 @@ export default {
             }).then((response) => {
                 if (response.data.results.length > 0) {
                     this.store.resultsMovies = response.data.results
+                    this.store.errorMessage = ''
                     console.log(this.store.resultsMovies)
                 } else {
                     this.store.resultsMovies = '',
                         this.store.errorMessage = 'Nessun elemento trovato'
+                    console.log("errore")
+
                 }
-
-
-
             }),
                 axios.get(this.store.apiConfig.apiUrlSeries, {
                     params: {
@@ -42,9 +43,12 @@ export default {
                 }).then((response) => {
                     if (response.data.results.length > 0) {
                         this.store.resultsSeries = response.data.results
+                        this.store.errorMessage = ''
                         console.log(this.store.resultsSeries)
                     } else {
-                        this.store.errorMessage = 'Nessun elemento trovato'
+                        this.store.resultsSeries = '',
+                            this.store.errorMessage = 'Nessun elemento trovato'
+                        console.log("errore")
                     }
 
                 })
