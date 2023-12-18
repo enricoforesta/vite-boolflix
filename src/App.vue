@@ -7,7 +7,6 @@ export default {
   name: "App",
   data() {
     return {
-
     }
   },
 
@@ -15,8 +14,6 @@ export default {
     AppHeader,
     AppMain,
   },
-
-
 }
 </script>
 
@@ -26,5 +23,3 @@ export default {
     <AppMain />
   </div>
 </template>
-
-<style scoped></style>

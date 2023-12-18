@@ -15,6 +15,7 @@ export default {
     },
 
     methods: {
+        // Funzioni per le chiamate API
         callApi() {
             axios.get(this.store.apiConfig.apiUrlMovies, {
                 params: {

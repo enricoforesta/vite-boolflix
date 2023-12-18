@@ -11,6 +11,7 @@ export default {
 </script>
 
 <template>
+    <!-- Barra di ricerca -->
     <div class="search-text">
         <label for="search" class="text-light px-3">CERCA:</label>
         <input v-model="this.store.searchText" @keyup.enter="$emit('search')" type="text" name="search" id="search"
@@ -19,6 +20,7 @@ export default {
             <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
         </button>
     </div>
+    <!-- / Barra di ricerca -->
 </template>
 
 <style scoped>
